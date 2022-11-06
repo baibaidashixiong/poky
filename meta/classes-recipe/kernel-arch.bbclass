@@ -21,7 +21,7 @@ valid_archs = "alpha cris ia64 \
                avr32 blackfin \
                loongarch64 \
                microblaze \
-               nios2 arc riscv xtensa"
+               nios2 arc riscv xtensa loongarch loongarch64"
 
 def map_kernel_arch(a, d):
     import re
@@ -43,6 +43,7 @@ def map_kernel_arch(a, d):
     elif re.match('sh(3|4)$', a):               return 'sh'
     elif re.match('bfin', a):                   return 'blackfin'
     elif re.match('microblazee[bl]', a):        return 'microblaze'
+    elif re.match('loongarch(32|64)', a):       return 'loongarch'
     elif a in valid_archs:                      return a
     else:
         if not d.getVar("TARGET_OS").startswith("linux"):
