@@ -17,11 +17,7 @@ SRC_URI = "${GITHUB_BASE_URI}/download/${PV}/meson-${PV}.tar.gz \
            file://0002-Support-building-allarch-recipes-again.patch \
            file://0001-Check-for-clang-before-guessing-gcc-or-lcc.patch \
            "
-<<<<<<<< HEAD:meta/recipes-devtools/meson/meson_1.0.0.bb
 SRC_URI[sha256sum] = "aa50a4ba4557c25e7d48446abfde857957dcdf58385fffbe670ba0e8efacce05"
-========
-SRC_URI[sha256sum] = "c5e27e091c2a35b9049e152a6535045ebbd057253aeb67856de6ecbb7b917bab"
->>>>>>>> a33d7f85e7 (meson: update 0.63.3 -> 0.64.0):meta/recipes-devtools/meson/meson_0.64.0.bb
 
 inherit python_setuptools_build_meta github-releases
 
