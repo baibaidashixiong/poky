@@ -104,7 +104,7 @@ EXTRA_OECONF = "--program-prefix=${TARGET_PREFIX} \
                 ${LDGOLD} \
                 ${EXTRA_TARGETS} \
                 ${@bb.utils.contains('DISTRO_FEATURES', 'multiarch', '--enable-64-bit-bfd', '', d)}"
-
+EXTRA_OECONF:remove:loongarch64 =  "--enable-gold"
 EXTRA_TARGETS = ""
 EXTRA_TARGETS:x86-64 = " --enable-targets=x86_64-pe,x86_64-pep "
 EXTRA_TARGETS:class-native = ""
